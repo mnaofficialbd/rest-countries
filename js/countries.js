@@ -23,14 +23,17 @@ const getCountryHTML = country => {
     <img src="${country.flags.png}">
     <h3>Capital: ${country.capital}</h3>
     <h3>Population: ${country.population}</h3>
-    <h3>Region: ${region}</h3>
+    <h3>Region: ${country.region}</h3>
+    <h3>subregion: ${country.subregion}</h3>
+    <h3>status: ${country.status}</h3>
+    <h3>Area: ${country.area}</h3>
     </div>`
 } 
 */
 
 /* option-1======
 const getCountryHTML = country => {
-    const { name, flags, capital, population } = country;
+    const { name, flags, capital, population, region, area, status, subregion } = country;
     return `
     <div class="country">
     <h2>${name.common}</h2>
@@ -38,6 +41,9 @@ const getCountryHTML = country => {
     <h3>Capital: ${capital}</h3>
     <h3>Population: ${population}</h3>
     <h3>Region: ${region}</h3>
+    <h3>subregion: ${subregion}</h3>
+    <h3>status: ${status}</h3>
+    <h3>Area: ${area}</h3>
     </div>`
 } 
 */
@@ -57,7 +63,5 @@ const getCountryHTML = ({ name, flags, capital, population, region, area, status
     <h3>Area: ${area}</h3>
     </div>`
 }
-
-
 
 loadCountries();
